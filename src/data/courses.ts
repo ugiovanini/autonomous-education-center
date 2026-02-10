@@ -1,0 +1,326 @@
+export interface Course {
+  id: string;
+  title: string;
+  instructor: string;
+  discipline: string;
+  disciplineSlug: string;
+  duration: string;
+  lessons: number;
+  rating: number;
+  students: number;
+  image: string;
+  description: string;
+  content: LessonItem[];
+}
+
+export interface LessonItem {
+  number: number;
+  title: string;
+  duration: string;
+  completed: boolean;
+  locked: boolean;
+}
+
+export interface Discipline {
+  slug: string;
+  name: string;
+  description: string;
+  courseCount: number;
+  color: string;
+}
+
+export const disciplines: Discipline[] = [
+  {
+    slug: "administracao",
+    name: "Administração",
+    description: "Gestão empresarial, produção, operações e estratégia de negócios",
+    courseCount: 32,
+    color: "from-blue-600 to-blue-800",
+  },
+  {
+    slug: "contabilidade",
+    name: "Contabilidade",
+    description: "Ciências contábeis, auditoria, custos e controladoria",
+    courseCount: 20,
+    color: "from-emerald-600 to-emerald-800",
+  },
+  {
+    slug: "economia",
+    name: "Economia",
+    description: "Micro e macroeconomia, mercados financeiros e desenvolvimento",
+    courseCount: 23,
+    color: "from-indigo-600 to-indigo-800",
+  },
+  {
+    slug: "projetos",
+    name: "Projetos",
+    description: "Análise, gestão e execução de projetos empresariais",
+    courseCount: 12,
+    color: "from-orange-500 to-orange-700",
+  },
+  {
+    slug: "servicos",
+    name: "Serviços",
+    description: "Gestão de serviços, atendimento e operações de suporte",
+    courseCount: 10,
+    color: "from-teal-600 to-teal-800",
+  },
+  {
+    slug: "marketing",
+    name: "Marketing",
+    description: "Estratégias de marketing, branding e gestão da demanda",
+    courseCount: 15,
+    color: "from-rose-500 to-rose-700",
+  },
+];
+
+export const sampleCourses: Course[] = [
+  {
+    id: "adm-estrategica",
+    title: "Administração Estratégica de Negócios",
+    instructor: "Prof. Ricardo Almeida",
+    discipline: "Administração",
+    disciplineSlug: "administracao",
+    duration: "8h 30min",
+    lessons: 24,
+    rating: 4.8,
+    students: 1234,
+    image: "admin",
+    description: "Este curso oferece uma abordagem completa e prática para dominar os conceitos essenciais da administração estratégica. Com aulas interativas e projetos práticos, você desenvolverá habilidades que podem ser aplicadas imediatamente no mercado de trabalho.",
+    content: [
+      { number: 1, title: "Introdução à Estratégia Empresarial", duration: "15 min", completed: true, locked: false },
+      { number: 2, title: "Análise do Ambiente Competitivo", duration: "25 min", completed: true, locked: false },
+      { number: 3, title: "Modelos de Porter e SWOT", duration: "30 min", completed: false, locked: false },
+      { number: 4, title: "Projeto Prático: Diagnóstico Estratégico", duration: "45 min", completed: false, locked: false },
+      { number: 5, title: "Balanced Scorecard e KPIs", duration: "35 min", completed: false, locked: true },
+      { number: 6, title: "Certificação Final", duration: "20 min", completed: false, locked: true },
+    ],
+  },
+  {
+    id: "contabilidade-custos",
+    title: "Contabilidade de Custos",
+    instructor: "Profa. Maria Santos",
+    discipline: "Contabilidade",
+    disciplineSlug: "contabilidade",
+    duration: "5h 45min",
+    lessons: 15,
+    rating: 4.7,
+    students: 2341,
+    image: "contabil",
+    description: "Domine os fundamentos da contabilidade de custos e aprenda a analisar, classificar e controlar custos empresariais com métodos avançados.",
+    content: [
+      { number: 1, title: "Introdução à Contabilidade de Custos", duration: "15 min", completed: true, locked: false },
+      { number: 2, title: "Classificação de Custos", duration: "25 min", completed: true, locked: false },
+      { number: 3, title: "Custeio por Absorção", duration: "30 min", completed: false, locked: false },
+      { number: 4, title: "Custeio Variável", duration: "35 min", completed: false, locked: false },
+      { number: 5, title: "Análise CVL", duration: "40 min", completed: false, locked: true },
+    ],
+  },
+  {
+    id: "macroeconomia",
+    title: "Macroeconomia",
+    instructor: "Prof. João Oliveira",
+    discipline: "Economia",
+    disciplineSlug: "economia",
+    duration: "7h 15min",
+    lessons: 20,
+    rating: 4.6,
+    students: 1876,
+    image: "economia",
+    description: "Compreenda os fundamentos da macroeconomia: políticas monetária e fiscal, inflação, câmbio e crescimento econômico.",
+    content: [
+      { number: 1, title: "Introdução à Macroeconomia", duration: "20 min", completed: false, locked: false },
+      { number: 2, title: "PIB e Contabilidade Nacional", duration: "25 min", completed: false, locked: false },
+      { number: 3, title: "Política Monetária", duration: "30 min", completed: false, locked: true },
+      { number: 4, title: "Política Fiscal", duration: "35 min", completed: false, locked: true },
+    ],
+  },
+  {
+    id: "gestao-projetos",
+    title: "Análise de Projetos e Investimentos",
+    instructor: "Profa. Ana Clara",
+    discipline: "Projetos",
+    disciplineSlug: "projetos",
+    duration: "6h 20min",
+    lessons: 18,
+    rating: 4.9,
+    students: 987,
+    image: "projetos",
+    description: "Aprenda a avaliar a viabilidade de projetos e investimentos com técnicas de VPL, TIR e payback.",
+    content: [
+      { number: 1, title: "Fundamentos de Análise de Investimentos", duration: "15 min", completed: false, locked: false },
+      { number: 2, title: "Fluxo de Caixa Projetado", duration: "25 min", completed: false, locked: false },
+      { number: 3, title: "VPL e TIR", duration: "30 min", completed: false, locked: true },
+    ],
+  },
+  {
+    id: "gestao-servicos",
+    title: "Gestão de Serviços e Operações",
+    instructor: "Prof. Carlos Mendes",
+    discipline: "Serviços",
+    disciplineSlug: "servicos",
+    duration: "4h 50min",
+    lessons: 12,
+    rating: 4.5,
+    students: 654,
+    image: "servicos",
+    description: "Gerencie operações de serviços com excelência, focando em qualidade, eficiência e satisfação do cliente.",
+    content: [
+      { number: 1, title: "Introdução à Gestão de Serviços", duration: "15 min", completed: false, locked: false },
+      { number: 2, title: "Qualidade em Serviços", duration: "20 min", completed: false, locked: false },
+    ],
+  },
+  {
+    id: "marketing-estrategico",
+    title: "Gestão Avançada de Marketing",
+    instructor: "Profa. Beatriz Lima",
+    discipline: "Marketing",
+    disciplineSlug: "marketing",
+    duration: "6h 10min",
+    lessons: 16,
+    rating: 4.7,
+    students: 1543,
+    image: "marketing",
+    description: "Estratégias avançadas de marketing digital e tradicional para posicionar sua marca e conquistar mercados.",
+    content: [
+      { number: 1, title: "Fundamentos de Marketing Estratégico", duration: "20 min", completed: false, locked: false },
+      { number: 2, title: "Segmentação e Posicionamento", duration: "25 min", completed: false, locked: false },
+      { number: 3, title: "Marketing Digital Avançado", duration: "35 min", completed: false, locked: true },
+    ],
+  },
+];
+
+export const disciplineCourses: Record<string, string[]> = {
+  administracao: [
+    "Administração da Produção e Operações",
+    "Administração de Recursos Humanos",
+    "Administração Estratégica de Negócios",
+    "Administração Financeira e Orçamentária",
+    "Análise de Projetos e Investimentos",
+    "Armazenagem e Movimentação de Materiais",
+    "Comércio Exterior",
+    "Contabilidade e Finanças",
+    "Contabilidade Tributária",
+    "Direito Aplicado aos Negócios",
+    "Empreendedorismo",
+    "Estrutura das Demonstrações Financeiras",
+    "Fundamentos da Administração",
+    "Fundamentos de Contabilidade",
+    "Fundamentos de Economia",
+    "Fundamentos de Marketing",
+    "Gestão Avançada de Marketing",
+    "Gestão da Demanda e dos Estoques",
+    "Gestão da Distribuição Logística",
+    "Gestão de Marketing",
+    "Gestão Estratégica de Custos",
+    "Jogos de Empresas",
+    "Matemática Financeira",
+    "Métodos e Ferramentas da Gestão da Qualidade",
+    "Modelos Inovadores em Negócios",
+    "Organização, Sistemas e Métodos",
+    "Probabilidade e Estatística",
+    "Redes de Alianças Estratégicas",
+    "Remuneração Estratégica",
+    "Sistemas Gerenciais de Apoio à Decisão",
+    "Tecnologias da Informação e da Comunicação Aplicadas aos Negócios",
+    "Tópicos Avançados em Administração",
+  ],
+  contabilidade: [
+    "Análise Demonstrações Financeiras",
+    "Análise de Custos",
+    "Auditoria",
+    "Contabilidade Atuarial e Ética Profissional",
+    "Contabilidade Avançada",
+    "Contabilidade Comercial",
+    "Contabilidade de Custos",
+    "Contabilidade Empresarial",
+    "Contabilidade e Orçamento Público",
+    "Contabilidade Societária",
+    "Contabilidade Tributária",
+    "Controladoria",
+    "Demonstrações Financeiras Básicas",
+    "Direito Tributário e Trabalhista",
+    "Estruturas de Mercado e Tomada de Decisão",
+    "Gestão de Pessoas",
+    "Mercado de Capitais",
+    "Perícia Avaliação Arbitragem",
+    "Planejamento Tributário",
+    "Teoria dos Jogos",
+  ],
+  economia: [
+    "Análise de Projetos e Investimentos",
+    "Ciência Política",
+    "Conjuntura Econômica",
+    "Contabilidade Social",
+    "Desenvolvimento Econômico",
+    "Direito Aplicado aos Negócios",
+    "Direito Econômico",
+    "Econometria",
+    "Economia Brasileira",
+    "Economia Brasileira Contemporânea",
+    "Economia Industrial",
+    "Economia Internacional",
+    "Economia Monetária e Sistema Financeiro",
+    "Estruturas de Mercado e Tomada de Decisão",
+    "Formação Econômica do Brasil",
+    "Fundamentos de Sociologia Aplicada às Organizações",
+    "História Pensamento Econômico",
+    "Legislação e Ética Profissional",
+    "Macroeconomia",
+    "Microeconomia",
+    "Organização Sistemas e Métodos",
+    "Regressão e Modelagem",
+    "Teoria dos Jogos",
+  ],
+  projetos: [
+    "Análise de Projetos e Investimentos",
+    "Gestão de Projetos",
+    "Gestão de Riscos em Projetos",
+    "Metodologias Ágeis",
+    "Planejamento e Controle de Projetos",
+    "Gestão de Portfólio",
+    "PMO e Governança",
+    "Projetos de Inovação",
+    "Viabilidade Econômico-Financeira",
+    "Gestão de Stakeholders",
+    "Liderança em Projetos",
+    "Ferramentas de Gestão de Projetos",
+  ],
+  servicos: [
+    "Gestão de Serviços e Operações",
+    "Qualidade em Serviços",
+    "Gestão de Atendimento ao Cliente",
+    "Logística de Serviços",
+    "Inovação em Serviços",
+    "Design de Serviços",
+    "Marketing de Serviços",
+    "Gestão de Processos",
+    "Excelência Operacional",
+    "Customer Success",
+  ],
+  marketing: [
+    "Fundamentos de Marketing",
+    "Gestão de Marketing",
+    "Gestão Avançada de Marketing",
+    "Marketing Digital",
+    "Branding e Posicionamento",
+    "Comportamento do Consumidor",
+    "Pesquisa de Mercado",
+    "Trade Marketing",
+    "Marketing de Conteúdo",
+    "Endomarketing",
+    "Neuromarketing",
+    "Marketing Internacional",
+    "Planejamento de Comunicação",
+    "Métricas e Analytics",
+    "Growth Marketing",
+  ],
+};
+
+export const materials = [
+  { name: "Material Complementar - Aula 1.pdf", size: "2.4 MB", date: "05 Fev 2026", type: "pdf" },
+  { name: "Slides da Apresentação.pdf", size: "5.1 MB", date: "03 Fev 2026", type: "pdf" },
+  { name: "Exercícios Práticos.doc", size: "1.2 MB", date: "02 Fev 2026", type: "doc" },
+  { name: "Diagrama do Projeto.png", size: "856 KB", date: "01 Fev 2026", type: "image" },
+  { name: "Tutorial Avançado.mp4", size: "45.3 MB", date: "28 Jan 2026", type: "video" },
+];
