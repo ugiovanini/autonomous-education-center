@@ -87,18 +87,11 @@ export const disciplines: Discipline[] = [
     color: "from-cyan-600 to-cyan-800",
   },
   {
-    slug: "planejamento-financeiro",
-    name: "Planejamento Financeiro Pessoal",
-    description: "Planejamento financeiro pessoal e familiar, investimentos e proteção patrimonial",
-    courseCount: 12,
+    slug: "financas-investimentos",
+    name: "Finanças & Investimentos",
+    description: "Finanças pessoais, mercado financeiro, gestão de investimentos e wealth management",
+    courseCount: 34,
     color: "from-violet-600 to-violet-800",
-  },
-  {
-    slug: "financas",
-    name: "Finanças, Investimentos e Banking",
-    description: "Mercado financeiro, gestão de investimentos, banking e wealth management",
-    courseCount: 22,
-    color: "from-sky-700 to-sky-900",
   },
 ];
 
@@ -400,7 +393,7 @@ export const disciplineCourses: Record<string, string[]> = {
     "Otimização Numérica",
     "Probabilidade",
   ],
-  "planejamento-financeiro": [
+  "financas-investimentos": [
     "Ciências Comportamentais Aplicadas",
     "Competências e Habilidades do Planejador Financeiro",
     "Gestão de Riscos e Proteções",
@@ -413,8 +406,6 @@ export const disciplineCourses: Record<string, string[]> = {
     "Planejamento Tributário e Fiscal",
     "Políticas Macroeconômicas Aplicadas ao PFPF",
     "Processo Planejamento Financeiro Pessoal Familiar",
-  ],
-  financas: [
     "Banco de Investimentos e Engenharia Financeira",
     "Customer Success: Relacionamento e Fidelização",
     "Finanças Comportamentais",
@@ -437,6 +428,55 @@ export const disciplineCourses: Record<string, string[]> = {
     "Tecnologia Financeira, Fintechs e Criptomoedas",
     "Vendas e Gestão Comercial em Produtos e Serviços Financeiros",
     "Wealth Management, Family Office e Gestão de Recursos",
+  ],
+};
+
+export const disciplineCourseGroups: Record<string, { group: string; courses: string[] }[]> = {
+  "financas-investimentos": [
+    {
+      group: "Finanças Pessoais",
+      courses: [
+        "Ciências Comportamentais Aplicadas",
+        "Competências e Habilidades do Planejador Financeiro",
+        "Gestão de Riscos e Proteções",
+        "Investimentos no Brasil",
+        "O Impacto Transformação Digital Vida Planejador Financeiro",
+        "Planejamento da Aposentadoria",
+        "Planejamento Financeiro para Morar no Exterior",
+        "Planejamento Financeiro Prática Métodos e Processos",
+        "Planejamento Sucessório",
+        "Planejamento Tributário e Fiscal",
+        "Políticas Macroeconômicas Aplicadas ao PFPF",
+        "Processo Planejamento Financeiro Pessoal Familiar",
+      ],
+    },
+    {
+      group: "Mercado Financeiro e Investimentos",
+      courses: [
+        "Banco de Investimentos e Engenharia Financeira",
+        "Customer Success: Relacionamento e Fidelização",
+        "Finanças Comportamentais",
+        "Gestão Financeira e de Risco",
+        "Investimentos e Trading: Análise e Ativos de Curto Prazo",
+        "Investimentos de Renda Fixa: Juros, Dívida Pública e Privada",
+        "Investimentos de Renda Variável: Ações, Ativos e Valuation",
+        "Investimentos Internacionais: Portfolios Globais e Offshore",
+        "Investimentos: Teoria e Capital Ideas",
+        "Macroeconomia, Política e Análise Econômica",
+        "Matemática Financeira",
+        "Metas: Como Usar?",
+        "O Que o Dinheiro Não Compra",
+        "Planejamento Fiscal e Sucessório",
+        "Planejamento Financeiro e de Aposentadoria",
+        "Política, Economia e Finanças",
+        "Profissional Integral: Consciência e Transformação Social",
+        "Relacionamento com Cliente: Ética e Conduta nas Finanças",
+        "Sistema Financeiro: Produtos, Serviços e Crimes Financeiros",
+        "Tecnologia Financeira, Fintechs e Criptomoedas",
+        "Vendas e Gestão Comercial em Produtos e Serviços Financeiros",
+        "Wealth Management, Family Office e Gestão de Recursos",
+      ],
+    },
   ],
 };
 

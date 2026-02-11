@@ -20,7 +20,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <span className="inline-block bg-gold/20 text-gold font-body text-sm font-semibold px-4 py-1.5 rounded-full mb-6 border border-gold/30">
+            <span className="inline-block bg-gold/20 text-gold font-body text-sm font-semibold px-4 py-1.5 rounded-full mb-6 mt-16 border border-gold/30">
               Educação Executiva de Excelência
             </span>
           </motion.div>
@@ -42,8 +42,8 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             className="font-body text-lg md:text-xl text-primary-foreground/70 mb-8 max-w-2xl leading-relaxed"
           >
-            Competências mensuráveis, aprendizagem por projetos e IA agentica. 
-            Trilhas stackáveis para executivos, empresários e empreendedores.
+            Competências mensuráveis, aprendizagem por projetos reais e apoiada por IA agentica. 
+            Trilhas stackáveis para executivos, empresários e estudantes.
           </motion.p>
 
           <motion.div
