@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Lock, ShieldCheck, ArrowLeft, Eye, EyeOff } from "lucide-react";
 import { Link } from "react-router-dom";
 
-// SHA-256 hash of the admin password "aec@admin2026"
+// SHA-256 hash for admin access verification
 const ADMIN_HASH = "b0fd319f82ab39f8dc7635b1d83c3e3cad3bdb4573734a65dbfc1c0c00d4bfb4";
 
 async function sha256(message: string): Promise<string> {
