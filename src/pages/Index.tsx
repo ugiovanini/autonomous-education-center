@@ -15,18 +15,18 @@ const features = [
   },
   {
     icon: Brain,
-    title: "IA Agentica na ALP",
+    title: "IA Agentica Ativa",
     description: "Tutor, avaliador e orquestrador inteligente que adapta o ensino ao seu nível.",
   },
   {
     icon: TrendingUp,
     title: "Trilhas Stackáveis",
-    description: "Do operacional ao estratégico — cada trilha é autônoma mas encadeável.",
+    description: "Do operacional ao estratégico, cada trilha é autônoma mas encadeável.",
   },
   {
     icon: Sparkles,
     title: "Aprendizagem por Projetos",
-    description: "PBL/CBL com entregas reais e feedback imediato e acionável.",
+    description: "Entregas reais e feedback imediato e acionável.",
   },
 ];
 
@@ -51,7 +51,7 @@ const Index = () => {
               Por que a <span className="text-gradient-gold">AEC</span>?
             </h2>
             <p className="font-body text-muted-foreground max-w-xl mx-auto">
-              Metodologia de ponta conectando práticas consolidadas por Harvard, MIT Sloan e FGV
+              Metodologia de ponta conectando práticas e guias em projetos reais e dinâmicos
             </p>
           </motion.div>
 

@@ -21,8 +21,7 @@ const imageMap: Record<string, string> = {
   marketing: courseMarketing,
   direito: courseDireito,
   matematica: courseMatematica,
-  "planejamento-financeiro": coursePlanejamento,
-  financas: courseFinancas,
+  "financas-investimentos": courseFinancas,
 };
 
 interface DisciplineCardProps {
