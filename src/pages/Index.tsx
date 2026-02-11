@@ -91,7 +91,7 @@ const Index = () => {
               <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-2">
                 Linhas de Disciplinas
               </h2>
-              <p className="font-body text-muted-foreground">6 áreas de conhecimento essenciais</p>
+              <p className="font-body text-muted-foreground">10 áreas de conhecimento essenciais</p>
             </div>
             <Link to="/disciplinas" className="hidden md:inline-flex font-body text-sm font-medium text-gold hover:text-gold-dark transition-colors">
               Ver todas →

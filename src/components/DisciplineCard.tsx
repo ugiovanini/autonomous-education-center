@@ -8,6 +8,10 @@ import courseEconomia from "@/assets/course-economia.jpg";
 import courseProjetos from "@/assets/course-projetos.jpg";
 import courseServicos from "@/assets/course-servicos.jpg";
 import courseMarketing from "@/assets/course-marketing.jpg";
+import courseDireito from "@/assets/course-direito.jpg";
+import courseMatematica from "@/assets/course-matematica.jpg";
+import coursePlanejamento from "@/assets/course-planejamento.jpg";
+import courseFinancas from "@/assets/course-financas.jpg";
 
 const imageMap: Record<string, string> = {
   administracao: courseAdmin,
@@ -16,6 +20,10 @@ const imageMap: Record<string, string> = {
   projetos: courseProjetos,
   servicos: courseServicos,
   marketing: courseMarketing,
+  direito: courseDireito,
+  matematica: courseMatematica,
+  "planejamento-financeiro": coursePlanejamento,
+  financas: courseFinancas,
 };
 
 interface DisciplineCardProps {
