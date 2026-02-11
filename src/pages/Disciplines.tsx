@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, BookOpen } from "lucide-react";
 import { disciplines, sampleCourses, disciplineCourses } from "@/data/courses";
+import { getVisibleSlugs } from "@/hooks/use-discipline-visibility";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DisciplineCard from "@/components/DisciplineCard";
@@ -8,6 +9,7 @@ import CourseCard from "@/components/CourseCard";
 
 const Disciplines = () => {
   const { slug } = useParams();
+  const visibleSlugs = getVisibleSlugs();
 
   if (slug) {
     const discipline = disciplines.find((d) => d.slug === slug);
@@ -76,7 +78,7 @@ const Disciplines = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {disciplines.map((d) => (
+            {disciplines.filter((d) => visibleSlugs.has(d.slug)).map((d) => (
               <DisciplineCard key={d.slug} discipline={d} />
             ))}
           </div>
