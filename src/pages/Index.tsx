@@ -3,8 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import DisciplineCard from "@/components/DisciplineCard";
-import CourseCard from "@/components/CourseCard";
-import { disciplines, sampleCourses } from "@/data/courses";
+import { disciplines } from "@/data/courses";
 import { Target, Brain, TrendingUp, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -114,39 +113,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Featured Courses */}
-      <section className="py-16 md:py-24 bg-card">
-        <div className="container mx-auto px-4 md:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-foreground mb-3">
-              Cursos em Destaque
-            </h2>
-            <p className="font-body text-muted-foreground max-w-xl mx-auto">
-              Comece sua jornada com nossos cursos mais populares
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {sampleCourses.map((course, i) => (
-              <motion.div
-                key={course.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-              >
-                <CourseCard course={course} />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Featured Courses section removed - disciplines only */}
 
       {/* CTA */}
       <section className="py-16 md:py-24 bg-gradient-navy">
