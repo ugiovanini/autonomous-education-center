@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import DisciplineCard from "@/components/DisciplineCard";
 import { disciplines } from "@/data/courses";
+import { getVisibleSlugs } from "@/hooks/use-discipline-visibility";
 import { Target, Brain, TrendingUp, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -31,6 +32,9 @@ const features = [
 ];
 
 const Index = () => {
+  const visibleSlugs = getVisibleSlugs();
+  const visibleDisciplines = disciplines.filter((d) => visibleSlugs.has(d.slug));
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -98,7 +102,7 @@ const Index = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {disciplines.map((d, i) => (
+            {visibleDisciplines.map((d, i) => (
               <motion.div
                 key={d.slug}
                 initial={{ opacity: 0, y: 20 }}
