@@ -71,7 +71,7 @@ const Disciplines = () => {
               Nossas Disciplinas
             </h1>
             <p className="font-body text-muted-foreground max-w-2xl mx-auto">
-              Explore 6 linhas de disciplinas com mais de 75 cursos focados em gestão empresarial aplicada
+              Explore 10 linhas de disciplinas com mais de 150 cursos focados em gestão empresarial aplicada
             </p>
           </div>
 
